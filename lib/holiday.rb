@@ -83,9 +83,7 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
   holidays = holiday_hash.values.collect do |item|
     item.collect do |k, v|
-      if v.include?('BBQ') && k != nil
-        k
-      end
+      k if v.include?('BBQ')
     end
   end
   holidays.flatten
