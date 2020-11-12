@@ -86,7 +86,7 @@ def all_holidays_with_bbq(holiday_hash)
       k if v.include?('BBQ')
     end
   end
-  holidays.flatten.collect{|item| item if item != nil}
+  holidays.flatten
 end
 
 
